@@ -17,8 +17,6 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "noFallthroughCasesInSwitch": false,
-    "types": ["node", "Multer"],
+    "noFallthroughCasesInSwitch": false
   }
 }
