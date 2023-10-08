@@ -5,7 +5,10 @@ import configuration from 'config/configuration'
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule)
-  app.enableCors()
+  app.enableCors({
+    origin: [/^(http)[s]?:\/\/(localhost)(:[0-9]+)$/, /atbash$/],
+    credentials: true,
+  })
   app.use(
     morgan('tiny', {
       skip: ({ url }) => url === '/health',
