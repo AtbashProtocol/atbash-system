@@ -28,7 +28,7 @@ export class StorageService {
   async upload(file: Express.Multer.File) {
     const cid = toCID(file)
     const filename = toFilename(cid)
-    const url = this.toUrl(cid)
+    const url = this.toUrl(filename)
     await this.supabaseClient.storage
       .from(this.bucket)
       .upload(`public/${filename}`, file.buffer, {

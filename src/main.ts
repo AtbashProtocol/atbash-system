@@ -4,7 +4,7 @@ import morgan from 'morgan'
 import configuration from 'config/configuration'
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, { cors: true })
+  const app = await NestFactory.create(AppModule)
   app.enableCors()
   app.use(
     morgan('tiny', {
