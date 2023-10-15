@@ -6,11 +6,7 @@ import configuration from 'config/configuration'
 async function bootstrap() {
   const app = await NestFactory.create(AppModule)
   app.enableCors({
-    origin: [
-      /^(http)[s]?:\/\/(localhost)(:[0-9]+)$/,
-      'https://atbash-app.onrender.com/',
-    ],
-    credentials: true,
+    origin: '*',
   })
   app.use(
     morgan('tiny', {
