@@ -9,6 +9,7 @@ const configuration = () => ({
   },
   admin: {
     privKey: process.env.PRIV_KEY || '',
+    ecPrivKey: process.env.PRIV_KEY_EC || '',
   },
   storage: {
     maxSize: '5000000', // 5MB

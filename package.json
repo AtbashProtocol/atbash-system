@@ -28,6 +28,7 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^10.2.6",
     "@noble/ed25519": "1.7.3",
+    "@noble/secp256k1": "^1.7.1",
     "@supabase/supabase-js": "^2.36.0",
     "bs58": "^5.0.0",
     "buffer-xor": "^2.0.2",

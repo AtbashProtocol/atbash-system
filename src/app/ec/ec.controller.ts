@@ -9,4 +9,9 @@ export class ECController {
   decrypt(@Body() { message, r }: { message: string; r: string }) {
     return this.service.decrypt(message, r)
   }
+
+  @Post('decrypt/evm')
+  decryptEvm(@Body() { message, r }: { message: string; r: string }) {
+    return this.service.decryptEvm(message, r)
+  }
 }
