@@ -20,6 +20,7 @@ export class ECService {
     const C = ec.Point.fromHex(message)
     const R = ec.Point.fromHex(r)
     const M = C.subtract(R.multiply(this.ecPrivateKey))
-    return { message: M.toHex() }
+
+    return { message: { x: M.x.toString(), y: M.y.toString() } }
   }
 }
